@@ -16,9 +16,8 @@ from sklearn.preprocessing import LabelEncoder
 
 train_df = pd.read_csv('/kaggle/working/train_data.csv',
                     lineterminator='\n')
-val_df = pd.read_csv('/kaggle/working/test_data.csv',
-                   lineterminator='\n')
-test_df = pd.read_csv('/kaggle/working/inference_test_data.csv',
+val_df  = train_df.sample(frac=0.2)
+test_df = pd.read_csv('/kaggle/working/test_data.csv',
                    lineterminator='\n')                
 
 module_url = 'https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/2'
