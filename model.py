@@ -81,6 +81,8 @@ def Bert_model(bert_layer, max_len=512):
     model.compile(tf.keras.optimizers.Adam(lr=1e-5), loss='categorical_crossentropy', metrics=['accuracy'])
     
     return model
+
+    
 def train():
     model = Bert_model(bert_layer, max_len=max_len)
 
